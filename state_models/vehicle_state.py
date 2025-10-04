@@ -41,6 +41,7 @@ class VehicleState:
         # Initialize Tires
         for tire in ['fl','fr','rl','rr']:
             getattr(self,tire).fz = 0
+            getattr(self,tire).fz_elas = 0
         self.forces=[]
         self.moments=[]
         self.v=v # Tangential velocity

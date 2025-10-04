@@ -47,16 +47,13 @@ class TireState:
             fxy = fx0*fy0/np.sqrt(s**2*fy0**2+fx0**2*(np.tan(a))**2)
             fx_1 = np.sqrt(s**2*Ca**2+(1-s)**2*(np.cos(a))**2*fx0**2)/Ca
             fy_1 = np.sqrt((1-s)**2*(np.cos(a))**2*fy0**2+(np.sin(a))**2*Cs**2)/(Cs*np.cos(a))
-            # print(f'fxy {fxy}, fy_1 {fy_1}')
             self.fx = fxy*fx_1*np.sign(self.kappa)
             self.fy = fxy*fy_1*np.sign(self.alpha)
-        # print(f'fx {self.fx} fy {self.fy} fz {self.fz}')
     
     def eval(self,eta):
         if self.fz == 0:
             self.f_vec = [0,0,0]
             return
-
         self.fy0 = self.mf.fy(self.fz,self.alpha,self.gamma)
         self.dir = np.sign(eta)
         if self.free_rolling:
@@ -68,7 +65,7 @@ class TireState:
         self.c_alpha = self.mf.fy(self.fz,0.01,self.gamma)/0.01
         self.c_kappa = self.mf.fx(self.fz,0.05,self.gamma)/0.05
         self._comstock()
-        self.f_vec = np.array([self.fx,self.fy,self.fz] )
+        self.f_vec = np.array([self.fx,self.fy,self.fz])
 
     def _idealfx(self):
         def _minum_attempt(x):
@@ -79,7 +76,7 @@ class TireState:
         def _root_attempt(x):
             residual = self.fx_max - self.dir*self.mf.fx(self.fz,x,self.gamma)
             return residual
-        kappa_max = minimize_scalar(_minum_attempt,bounds(0,1) if self.dir==1 else (-1,0)).x
+        kappa_max = minimize_scalar(_minum_attempt,bounds = (0,1) if self.dir==1 else (-1,0)).x
         fx_grip_max = self.mf.fx(self.fz,kappa_max,self.gamma)
 
         if self.fx_max is not None and np.abs(fx_grip_max) >= np.abs(self.fx_max):

@@ -128,9 +128,9 @@ class DynModel:
         model.pitch = np.arcsin((dz_fl-dz_rl)/self.wheelbase)
 
         model.fl.gamma = static_camber_f + dz_sus_fl*camber_gain_f - model.roll
-        model.fr.gamma = static_camber_f + dz_sus_fr*camber_gain_f + model.roll
+        model.fr.gamma = -static_camber_f - dz_sus_fr*camber_gain_f + model.roll
         model.rl.gamma = static_camber_r + dz_sus_rl*camber_gain_r - model.roll
-        model.rr.gamma = static_camber_r + dz_sus_rr*camber_gain_r + model.roll
+        model.rr.gamma = -static_camber_r - dz_sus_rr*camber_gain_r + model.roll
     
     def steering(self,model:'vehicle_state.VehicleState'):
         # TODO Ackermann

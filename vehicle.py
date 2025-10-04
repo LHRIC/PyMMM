@@ -12,7 +12,6 @@ class Vehicle:
         print('Initializing vehicle object')
         print(f'reading "{parameters_file}"')
         vehicle_cfg: dict = parser.read_yaml(parameters_file)
-        # TODO auto unit conversion into metric, replace swept parameters with the corresponding sweep_idx
         self.params = vehicle_cfg
 
     def _debug(self): # Temporary module to debug vehicle_state

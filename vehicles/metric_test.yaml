@@ -27,9 +27,9 @@ params:
   max_travel_f: 0.030 # m (30 mm)
   max_travel_r: 0.030 # m (30 mm)
   tire_radius: 0.2032 # m
-  static_camber_f: 0.0 # rad
-  static_camber_r: 0.0 # rad
-  camber_gain_f: 0.0 # rad/m (0 deg/mm)
+  static_camber_f: 0.1 # rad
+  static_camber_r: 0.1 # rad
+  camber_gain_f: 0.001 # rad/m (0 deg/mm)
   camber_gain_r: 0.0 # rad/m (0 deg/mm)
   static_toe_f: 0.0 # rad
   static_toe_r: 0.0 # rad
