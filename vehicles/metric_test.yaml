@@ -32,6 +32,20 @@ params:
   camber_gain_f: 0 # rad/m (-0.0475 deg/mm)
   camber_gain_r: 0 # rad/m (-0.075 deg/mm)
   static_toe_f: -0.0175 # rad
+  lltd: 0.5 # [0-1]
+  ride_rate_f: 30000 # N/m
+  ride_rate_r: 30000 # N/m
+  wheel_rate_f: 40000 # N/m
+  wheel_rate_r: 40000 # N/m
+  max_travel_f: 0.030 # m (30 mm)
+  max_travel_r: 0.030 # m (30 mm)
+  tire_radius: 0.2032 # m
+  static_camber_f: 0.0 # rad
+  static_camber_r: 0.0 # rad
+  camber_gain_f: 0.0 # rad/m (0 deg/mm)
+  camber_gain_r: 0.0 # rad/m (0 deg/mm)
+  static_toe_f: 0.0 # rad
+  static_toe_r: 0.0 # rad
 
   ## Aero
   cla: 2.9 # m^2
