@@ -4,23 +4,21 @@ precalculated_envelope: # empty, or .yaml
 # Vehicle Parameters (SI units: m, N, rad, kg)
 params:
   ## High-Level
-  mass: 270.0 # kg
+  mass: 278.4 # kg
   cg_bias_f: 0.5 # [0-1]
   cg_height: 0.307 # m (12.0866 in)
   wheelbase: 1.535 # m
   trackwidth_f: 1.241 # m (48.875 in)
   trackwidth_r: 1.241 # m (48.875 in)
-  inertia_tensor: [[1,1,1],[1,1,1],[1,1,132.29]] # TODO update with real kg·m²
+  inertia_tensor: [[30.64903045, 0.33815380, -2.42855908],[-1.60542380, 123.49413860, -2.09940036],[10.76783941, 2.45343176, 136.30176470]] # TODO update with real kg·m²
 
   ## Suspension
-  rollc_f: 0.028 # m
-  rollc_r: 0.028 # m
+  rollc_f: 0.035 # m
+  rollc_r: 0.055 # m
   pitchc: 0.0 # m
   anti_squat: 0 # [0-1]
   anti_dive: 0 # [0-1]
   anti_lift: 0 # [0-1]
-<<<<<<< HEAD
-<<<<<<< HEAD
   lltd: 0.5 # [0-1] #FRONT OR REAR????????????????
   ride_rate_f: 45000 # N/m
   ride_rate_r: 45000 # N/m
@@ -34,35 +32,9 @@ params:
   camber_gain_f: 0 # rad/m (-0.0475 deg/mm)
   camber_gain_r: 0 # rad/m (-0.075 deg/mm)
   static_toe_f: -0.0175 # rad
-=======
-=======
->>>>>>> parent of 4d14257 (Update metric_test.yaml)
-  lltd: 0.5 # [0-1]
-  ride_rate_f: 30000 # N/m
-  ride_rate_r: 30000 # N/m
-  wheel_rate_f: 40000 # N/m
-  wheel_rate_r: 40000 # N/m
-  max_travel_f: 0.030 # m (30 mm)
-  max_travel_r: 0.030 # m (30 mm)
-  tire_radius: 0.2032 # m
-<<<<<<< HEAD
-  static_camber_f: 0.1 # rad
-  static_camber_r: 0.1 # rad
-  camber_gain_f: 0.001 # rad/m (0 deg/mm)
-  camber_gain_r: 0.0 # rad/m (0 deg/mm)
-  static_toe_f: 0.0 # rad
->>>>>>> ee32ef1bcdc80bc05e4545bc2cbcaa92d4e8c700
-=======
-  static_camber_f: 0.0 # rad
-  static_camber_r: 0.0 # rad
-  camber_gain_f: 0.0 # rad/m (0 deg/mm)
-  camber_gain_r: 0.0 # rad/m (0 deg/mm)
-  static_toe_f: 0.0 # rad
->>>>>>> parent of 4d14257 (Update metric_test.yaml)
-  static_toe_r: 0.0 # rad
 
   ## Aero
-  cla: 2.8 # m^2
+  cla: 2.9 # m^2
   cda: 1.1 # m^2
   cop: 0.5 # [0-1]
 
