@@ -5,12 +5,12 @@ precalculated_envelope: # empty, or .yaml
 params:
   ## High-Level
   mass: 278.4 # kg
-  cg_bias_f: 0.52 # [0-1]
+  cg_bias_f: 0.48 # [0-1]
   cg_height: 0.307 # m (12.0866 in)
   wheelbase: 1.535 # m
   trackwidth_f: 1.241 # m (48.875 in)
   trackwidth_r: 1.241 # m (48.875 in)
-  inertia_tensor: [[30.64903045, 0.33815380, -2.42855908],[-1.60542380, 123.49413860, -2.09940036],[10.76783941, 2.45343176, 136.30176470]] # TODO update with real kg·m²
+  inertia_tensor: [[30.64903045, 0.33815380, -2.42855908],[-1.60542380, 123.49413860, -2.09940036],[10.76783941, 2.45343176, 136.30176470]] #kg·m² (CAD MOI scaled by measured mass/CAD mass)
 
   ## Suspension
   rollc_f: 0.035 # m
@@ -20,10 +20,10 @@ params:
   anti_dive: 0.2 # [0-1]
   anti_lift: 0 # [0-1]
   lltd: 0.5 # [0-1] #FRONT OR REAR????????????????
-  ride_rate_f: 100000 # N/m
-  ride_rate_r: 110000 # N/m
-  wheel_rate_f: 200000 # N/m
-  wheel_rate_r: 200000 # N/m
+  ride_rate_f: 58921 # N/m
+  ride_rate_r: 72151 # N/m
+  wheel_rate_f: 39727 # N/m
+  wheel_rate_r: 52778 # N/m
   max_travel_f: 0.050 # m (50 mm)
   max_travel_r: 0.050 # m (50 mm)
   tire_radius: 0.203 # m
@@ -43,7 +43,7 @@ params:
 
   ## Aero
   cla: 2.9 # m^2 FRONT OR REAR??????????????
-  cda: 1.1 # m^2 
+  cda: 1.2 # m^2 
   cop: 0.55 # [0-1]
 
   ## Tires
