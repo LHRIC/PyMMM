@@ -5,7 +5,7 @@ precalculated_envelope: # empty, or .yaml
 params:
   ## High-Level
   mass: 278.4 # kg
-  cg_bias_f: 0.5 # [0-1]
+  cg_bias_f: 0.52 # [0-1]
   cg_height: 0.307 # m (12.0866 in)
   wheelbase: 1.535 # m
   trackwidth_f: 1.241 # m (48.875 in)
@@ -20,10 +20,10 @@ params:
   anti_dive: 0.2 # [0-1]
   anti_lift: 0 # [0-1]
   lltd: 0.5 # [0-1] #FRONT OR REAR????????????????
-  ride_rate_f: 45000 # N/m
-  ride_rate_r: 45000 # N/m
-  wheel_rate_f: 100000 # N/m
-  wheel_rate_r: 100000 # N/m
+  ride_rate_f: 100000 # N/m
+  ride_rate_r: 110000 # N/m
+  wheel_rate_f: 200000 # N/m
+  wheel_rate_r: 200000 # N/m
   max_travel_f: 0.050 # m (50 mm)
   max_travel_r: 0.050 # m (50 mm)
   tire_radius: 0.203 # m
@@ -33,12 +33,6 @@ params:
   camber_gain_r: 0 # rad/m (-0.075 deg/mm)
   static_toe_f: -0.0175 # rad
   lltd: 0.5 # [0-1]
-  ride_rate_f: 30000 # N/m
-  ride_rate_r: 30000 # N/m
-  wheel_rate_f: 40000 # N/m
-  wheel_rate_r: 40000 # N/m
-  max_travel_f: 0.050 # m (50 mm)
-  max_travel_r: 0.050 # m (50 mm)
   tire_radius: 0.2032 # m
   static_camber_f: 0.0 # rad
   static_camber_r: 0.0 # rad
@@ -50,7 +44,7 @@ params:
   ## Aero
   cla: 2.9 # m^2 FRONT OR REAR??????????????
   cda: 1.1 # m^2 
-  cop: 0.5 # [0-1]
+  cop: 0.55 # [0-1]
 
   ## Tires
   tire_file: 'vehicles/FSAE_Defaults.tir'
