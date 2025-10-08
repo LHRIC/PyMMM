@@ -4,8 +4,8 @@ precalculated_envelope: # empty, or .yaml
 # Vehicle Parameters (SI units: m, N, rad, kg)
 params:
   ## High-Level
-  mass: 278.4 # kg
-  cg_bias_f: 0.48 # [0-1]
+  mass: 290.5 # kg
+  cg_bias_f: 0.5 # [0-1]
   cg_height: 0.307 # m (12.0866 in)
   wheelbase: 1.535 # m
   trackwidth_f: 1.241 # m (48.875 in)
@@ -13,31 +13,25 @@ params:
   inertia_tensor: [[30.64903045, 0.33815380, -2.42855908],[-1.60542380, 123.49413860, -2.09940036],[10.76783941, 2.45343176, 136.30176470]] #kg·m² (CAD MOI scaled by measured mass/CAD mass)
 
   ## Suspension
-  rollc_f: 0.035 # m
-  rollc_r: 0.055 # m
+  rollc_f: 0.030 # m
+  rollc_r: 0.050 # m
   pitchc: 0.0 # m
-  anti_squat: 0 # [0-1]
-  anti_dive: 0.2 # [0-1]
+  anti_squat: 0.1 # [0-1]
+  anti_dive: 0.15 # [0-1]
   anti_lift: 0 # [0-1]
   lltd: 0.5 # [0-1] #FRONT OR REAR????????????????
-  ride_rate_f: 58921 # N/m
-  ride_rate_r: 72151 # N/m
+  ride_rate_f: 37180 # N/m
+  ride_rate_r: 49078 # N/m
   wheel_rate_f: 39727 # N/m
   wheel_rate_r: 52778 # N/m
   max_travel_f: 0.050 # m (50 mm)
   max_travel_r: 0.050 # m (50 mm)
   tire_radius: 0.203 # m
-  static_camber_f: -0.0175 # rad (-1 deg)
-  static_camber_r: -0.0175 # rad (-1 deg)
-  camber_gain_f: 0 # rad/m (-0.0475 deg/mm)
-  camber_gain_r: 0 # rad/m (-0.075 deg/mm)
-  static_toe_f: -0.0175 # rad
+  static_camber_f: 0.00 # rad (-1 deg)
+  static_camber_r: 0.00 # rad (-1 deg)
+  camber_gain_f: 0.0 # rad/m (-0.0475 deg/mm)
+  camber_gain_r: 0.0 # rad/m (-0.075 deg/mm)
   lltd: 0.5 # [0-1]
-  tire_radius: 0.2032 # m
-  static_camber_f: 0.0 # rad
-  static_camber_r: 0.0 # rad
-  camber_gain_f: 0.0 # rad/m (0 deg/mm)
-  camber_gain_r: 0.0 # rad/m (0 deg/mm)
   static_toe_f: 0.0 # rad
   static_toe_r: 0.0 # rad
 
