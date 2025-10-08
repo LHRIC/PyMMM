@@ -17,15 +17,15 @@ params:
   rollc_r: 0.055 # m
   pitchc: 0.0 # m
   anti_squat: 0 # [0-1]
-  anti_dive: 0 # [0-1]
+  anti_dive: 0.2 # [0-1]
   anti_lift: 0 # [0-1]
   lltd: 0.5 # [0-1] #FRONT OR REAR????????????????
   ride_rate_f: 45000 # N/m
   ride_rate_r: 45000 # N/m
   wheel_rate_f: 100000 # N/m
   wheel_rate_r: 100000 # N/m
-  max_travel_f: 0.050 # m (30 mm)
-  max_travel_r: 0.050 # m (30 mm)
+  max_travel_f: 0.050 # m (50 mm)
+  max_travel_r: 0.050 # m (50 mm)
   tire_radius: 0.203 # m
   static_camber_f: -0.0175 # rad (-1 deg)
   static_camber_r: -0.0175 # rad (-1 deg)
@@ -37,8 +37,8 @@ params:
   ride_rate_r: 30000 # N/m
   wheel_rate_f: 40000 # N/m
   wheel_rate_r: 40000 # N/m
-  max_travel_f: 0.030 # m (30 mm)
-  max_travel_r: 0.030 # m (30 mm)
+  max_travel_f: 0.050 # m (50 mm)
+  max_travel_r: 0.050 # m (50 mm)
   tire_radius: 0.2032 # m
   static_camber_f: 0.0 # rad
   static_camber_r: 0.0 # rad
@@ -48,8 +48,8 @@ params:
   static_toe_r: 0.0 # rad
 
   ## Aero
-  cla: 2.9 # m^2
-  cda: 1.1 # m^2
+  cla: 2.9 # m^2 FRONT OR REAR??????????????
+  cda: 1.1 # m^2 
   cop: 0.5 # [0-1]
 
   ## Tires
